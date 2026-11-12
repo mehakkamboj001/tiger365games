@@ -1,0 +1,17 @@
+/node_modules/
+/.next/
+/out/
+/build/
+/coverage/
+/dist/
+
+/package.json
+/package-lock.json
+
+.env*
+!.env.example
+
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
