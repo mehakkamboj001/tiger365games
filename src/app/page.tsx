@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { sports } from "../lib/site";
 import { SiteBrand } from "../components/site-brand";
+import { GameCollections, HomeHeader } from "../components/home-interactions";
 
 const fixtures = [
   {
@@ -25,19 +26,7 @@ const fixtures = [
 export default function HomePage() {
   return (
     <>
-      <header className="site-header">
-        <div className="header-inner">
-          <SiteBrand />
-          <nav className="main-nav" aria-label="Main navigation">
-            <Link href="/#sports">Sports</Link>
-            <Link href="/#fixtures">Fixtures</Link>
-            <Link href="/about">About</Link>
-          </nav>
-          <Link className="header-link" href="/responsible-play">
-            Play well <span aria-hidden="true">↗</span>
-          </Link>
-        </div>
-      </header>
+      <HomeHeader />
 
       <main>
         <div className="announcement">
@@ -106,6 +95,8 @@ export default function HomePage() {
           </div>
         </section>
 
+        <GameCollections />
+
         <section className="fixtures-section" id="fixtures" aria-labelledby="fixtures-title">
           <div className="section-wrap">
             <div className="section-heading fixture-heading">
@@ -168,18 +159,46 @@ export default function HomePage() {
       </main>
 
       <footer className="site-footer">
-        <div className="footer-main">
-          <SiteBrand className="footer-brand" />
-          <p>For the love of the game.<br />Made for fans, everywhere.</p>
-          <nav aria-label="Footer navigation">
-            <Link href="/about">About</Link>
+        <div className="footer-main section-wrap">
+          <div className="footer-brand-column">
+            <SiteBrand className="footer-brand" />
+            <p>Big moments, good company.<br />Find a little more room for play.</p>
+            <a className="footer-contact" href="https://wa.me/917009784942?text=I%20WANT%20PLAY%20GAMES" rel="noopener noreferrer" target="_blank">
+              <span aria-hidden="true">◉</span> Chat with us on WhatsApp
+            </a>
+          </div>
+          <div className="footer-link-column">
+            <h2>Explore</h2>
+            <Link href="/#sports">Sports</Link>
+            <Link href="/#games">Game concepts</Link>
+            <Link href="/#providers">Game studios</Link>
+            <Link href="/#fixtures">Featured fixtures</Link>
+          </div>
+          <div className="footer-link-column">
+            <h2>Information</h2>
+            <Link href="/about">About us</Link>
+            <Link href="/privacy">Privacy policy</Link>
+            <Link href="/terms">Terms of use</Link>
             <Link href="/responsible-play">Responsible play</Link>
             <Link href="/sitemap.xml">XML sitemap</Link>
-          </nav>
+          </div>
+          <div className="footer-trust-column">
+            <h2>Safety &amp; availability</h2>
+            <span className="age-mark">18<span>+</span></span>
+            <p>
+              Keep play in balance. Accounts, third-party game providers and
+              payments are not connected in this preview.
+            </p>
+            <div className="footer-payment-badges" aria-label="Payments are not enabled">
+              <span>NO CHECKOUT</span>
+              <span>DEMO ONLY</span>
+            </div>
+            <span className="footer-badge">DEMO SITE · NO REAL-MONEY PLAY</span>
+          </div>
         </div>
         <div className="footer-bottom">
           <span>© {new Date().getFullYear()} Tiger365Games. All rights reserved.</span>
-          <span>Enjoy sport responsibly. 18+</span>
+          <span>Concept games are previews only · Adults 18+ only</span>
         </div>
       </footer>
     </>

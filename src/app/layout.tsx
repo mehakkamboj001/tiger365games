@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: "%s | Tiger365Games",
   },
   description:
-    "Discover cricket, football, tennis and more with Tiger365Games — your home for sports, fixtures and games.",
+    "Discover sports, original game concepts and creative studios with Tiger365Games — a fan-first sports and arcade preview.",
   applicationName: "Tiger365Games",
   icons: {
     icon: "/images/tiger365games-icon.svg",
@@ -22,6 +22,8 @@ export const metadata: Metadata = {
     "tennis",
     "sports news",
     "fixtures",
+    "arcade games",
+    "game concepts",
   ],
   alternates: {
     canonical: "/",
